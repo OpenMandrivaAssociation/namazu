@@ -105,8 +105,8 @@ rm -rf %{buildroot}
 %{_bindir}/mailutime
 %{_bindir}/nmzgrep
 %{_bindir}/nmzmerge
-%{_mandir}/man1/namazu.1.bz2
-%{_mandir}/man1/mknmz.1.bz2
+%{_mandir}/man1/namazu.*
+%{_mandir}/man1/mknmz.*
 %{_datadir}/namazu/doc/*
 %{_datadir}/namazu/filter/*
 %{_datadir}/namazu/pl/*
