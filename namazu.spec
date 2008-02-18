@@ -6,7 +6,7 @@
 %define release   %mkrel 1
 %define libname %mklibname %name 3
 
-Summary: Namazu is a full-text search engine
+Summary: Full-text search engine
 Name: %{name}
 Version: %{version}
 Release: %{release}
@@ -53,7 +53,7 @@ Obsoletes: %{name}-devel
 Libraries and include files of Namazu.
 
 %package cgi
-Summary: A CGI interface for Namazu
+Summary: CGI interface for Namazu
 Group: Networking/WWW
 Requires: %{name} = %{version}
 Requires: webserver
