@@ -3,7 +3,7 @@
 %define _libexecdir	/var/www/cgi-bin
 %define version   2.0.14
 %define name      namazu
-%define release   %mkrel 2
+%define release   %mkrel 4
 %define libname %mklibname %name 3
 
 Summary: Full-text search engine
