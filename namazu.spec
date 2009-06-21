@@ -1,16 +1,16 @@
 # XXX is this right - it was /var/lib before FHS macros
 %define _localstatedir	/var/lib
 %define _libexecdir	/var/www/cgi-bin
-%define version   2.0.14
+%define version   2.0.19
 %define name      namazu
-%define release   %mkrel 4
+%define release   %mkrel 1
 %define libname %mklibname %name 3
 
 Summary: Full-text search engine
 Name: %{name}
 Version: %{version}
 Release: %{release}
-License: GPL
+License: GPLv2+
 Group: File tools
 BuildRequires: perl >= 5.6.0
 BuildRequires: perl-NKF >= 1.70
@@ -20,7 +20,7 @@ Requires: perl-File-MMagic >= 1.12
 Requires:  perl-NKF >= 1.70
 Requires: kakasi >= 2.3.0
 Requires: perl-Text-Kakasi >= 1.00
-Source: http://www.namazu.org/stable/%{name}-%{version}.tar.bz2
+Source: http://www.namazu.org/stable/%{name}-%{version}.tar.gz
 URL: http://www.namazu.org/
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 
@@ -66,9 +66,7 @@ A CGI interface for Namazu.
 %setup -q
 
 %build
-# define libtoolize to true, in case configure calls it
-%define __libtoolize /bin/true
-autoconf
+autoreconf -f -i
 %configure
 
 %make
@@ -108,7 +106,9 @@ rm -rf %{buildroot}
 %{_bindir}/*nmz
 %{_bindir}/mailutime
 %{_bindir}/nmzgrep
+%{_bindir}/nmzegrep
 %{_bindir}/nmzmerge
+%{_bindir}/nmzcat
 %{_mandir}/man1/namazu.*
 %{_mandir}/man1/mknmz.*
 %{_datadir}/namazu/doc/*
@@ -121,8 +121,7 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-, root, root)
-%{_libdir}/libnmz.so.7.0.0
-%{_libdir}/libnmz.so.7
+%{_libdir}/libnmz.so.7*
 
 %files -n %{libname}-devel
 %defattr(-, root, root)
