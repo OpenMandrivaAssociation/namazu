@@ -1,9 +1,9 @@
 # XXX is this right - it was /var/lib before FHS macros
 %define _localstatedir	/var/lib
 %define _libexecdir	/var/www/cgi-bin
-%define version   2.0.19
+%define version   2.0.20
 %define name      namazu
-%define release   %mkrel 2
+%define release   %mkrel 1
 %define libname %mklibname %name 3
 
 Summary: Full-text search engine
