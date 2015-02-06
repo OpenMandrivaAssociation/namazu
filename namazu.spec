@@ -6,7 +6,7 @@
 Summary: Full-text search engine
 Name: namazu
 Version: 2.0.20
-Release: 2
+Release: 3
 License: GPLv2+
 Group: File tools
 BuildRequires: perl >= 5.6.0
