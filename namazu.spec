@@ -18,7 +18,7 @@ Requires:  perl-NKF >= 1.70
 Requires: kakasi >= 2.3.0
 Requires: perl-Text-Kakasi >= 1.00
 Source0: http://www.namazu.org/stable/%{name}-%{version}.tar.gz
-URL: http://www.namazu.org/
+URL: https://www.namazu.org/
 
 %description
 Namazu is a full-text search engine software intended for easy use.
