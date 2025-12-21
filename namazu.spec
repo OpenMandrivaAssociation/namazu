@@ -9,6 +9,11 @@ Version: 2.0.20
 Release: 3
 License: GPLv2+
 Group: File tools
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: perl >= 5.6.0
 BuildRequires: perl-NKF >= 1.70
 BuildRequires: perl-Text-Kakasi >= 1.00
